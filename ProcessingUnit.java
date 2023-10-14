@@ -1,10 +1,17 @@
 import java.util.ArrayList;
 import java.util.Random;
 
-public class ProcessingUnit
-{
-    public void initializeProgram(int size)
-    {
+/**
+ * The ProcessingUnit class represents a processing unit that can initialize a program by generating a random array of integers.
+ */
+public class ProcessingUnit {
+
+    /**
+     * Initializes a program by generating a random array of integers.
+     *
+     * @param size The size of the random array to be generated.
+     */
+    public void initializeProgram(int size) {
         ArrayList<Integer> randomArray = new ArrayList<>(size);
         Random random = new Random();
 
