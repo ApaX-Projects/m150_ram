@@ -4,6 +4,7 @@ public class Main
 {
     public static void main (String[] args)
     {
+        /*
         Scanner scanner = new Scanner(System.in);
 
         Memory memory = new Memory();
@@ -13,6 +14,12 @@ public class Main
 
 
         cpu.initializeProgram(50);
+         */
+
+        CommandLineUI cmdUI = new CommandLineUI();
+
+        cmdUI.initialize();
+
 
 
 

@@ -18,7 +18,7 @@ public class SUB implements Instruction {
     public void execute(Memory mem, Accumulator acc, ProgramCounter counter, int pos) {
         // Get values from memory and the accumulator
         double x = mem.getValue(pos);
-        double y = acc.load(mem, pos);
+        double y = acc.getCurrentValue();
 
         // Perform subtraction and update the value in memory
         mem.setValue(x - y, pos);
