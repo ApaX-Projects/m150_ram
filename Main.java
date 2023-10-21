@@ -16,6 +16,10 @@ public class Main
         cpu.initializeProgram(50);
          */
 
+        Memory memory = new Memory();
+        Accumulator acc = new Accumulator();
+        ProgramCounter prgCount = new ProgramCounter();
+
         CommandLineUI cmdUI = new CommandLineUI();
 
         cmdUI.initialize();
