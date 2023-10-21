@@ -12,15 +12,15 @@ Die grundlegenden Funktionen sind in folgender Darstellung ersichtlich:
 
 Die RAM unterstützt die folgenden Befehle:
 
-- `ADD X`: Addiere den Inhalt des Speichers an Adresse X zum Inhalt des Akkumulators.
-- `SUB X`: Subtrahiere den Inhalt des Speichers an Adresse X vom Inhalt des Akkumulators.
-- `LDA X`: Lade den Akkumulator mit dem Inhalt der Speicheradresse X.
-- `STA X`: Speichere den Inhalt des Akkumulators in der Speicheradresse X.
-- `LDI X`: Lade den Akkumulator indirekt mit dem Inhalt der Speicheradresse X.
-- `STI X`: Speichere den Inhalt des Akkumulators indirekt in der Speicheradresse X.
-- `JMP X`: Springe zur markierten Instruktion X im Programm.
-- `JMZ X`: Springe zur markierten Instruktion X im Programm, wenn der Akkumulator den Wert 0 enthält.
-- `HLT`: Beende das Programm.
+- `m150_ram.ADD X`: Addiere den Inhalt des Speichers an Adresse X zum Inhalt des Akkumulators.
+- `m150_ram.SUB X`: Subtrahiere den Inhalt des Speichers an Adresse X vom Inhalt des Akkumulators.
+- `m150_ram.LDA X`: Lade den Akkumulator mit dem Inhalt der Speicheradresse X.
+- `m150_ram.STA X`: Speichere den Inhalt des Akkumulators in der Speicheradresse X.
+- `m150_ram.LDI X`: Lade den Akkumulator indirekt mit dem Inhalt der Speicheradresse X.
+- `m150_ram.STI X`: Speichere den Inhalt des Akkumulators indirekt in der Speicheradresse X.
+- `m150_ram.JMP X`: Springe zur markierten Instruktion X im Programm.
+- `m150_ram.JMZ X`: Springe zur markierten Instruktion X im Programm, wenn der Akkumulator den Wert 0 enthält.
+- `m150_ram.HLT`: Beende das Programm.
 
 ### 2.2. Ablauf
 
@@ -31,7 +31,7 @@ Das Programm wird von oben nach unten ausgeführt. Jede Instruktion wird nachein
 1. Laden Sie ein Programm in den Speicher der RAM.
 2. Starten Sie die RAM.
 3. Die RAM wird die Instruktionen im Programm ausführen und den Zustand des Akkumulators und des Speichers aktualisieren.
-4. Das Programm kann mit einer `HLT`-Instruktion beendet werden.
+4. Das Programm kann mit einer `m150_ram.HLT`-Instruktion beendet werden.
 
 ## 3. Ideen und Absichten
 

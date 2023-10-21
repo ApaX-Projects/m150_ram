@@ -1,5 +1,7 @@
+package m150_ram;
+
 /**
- * The Accumulator class represents a simple accumulator that can load and store values from/to a Memory object.
+ * The m150_ram.Accumulator class represents a simple accumulator that can load and store values from/to a m150_ram.Memory object.
  */
 public class Accumulator {
 
@@ -8,7 +10,7 @@ public class Accumulator {
     /**
      * Load a value from a specified memory cell.
      *
-     * @param mem The Memory object from which to load the value.
+     * @param mem The m150_ram.Memory object from which to load the value.
      * @param pos The position (cell index) from which to load the value.
      * @return The value loaded from the memory cell.
      */
@@ -20,7 +22,7 @@ public class Accumulator {
     /**
      * Store a value in a specified memory cell.
      *
-     * @param mem   The Memory object in which to store the value.
+     * @param mem   The m150_ram.Memory object in which to store the value.
      * @param pos   The position (cell index) at which to store the value.
      * @param value The value to be stored in the memory cell.
      */

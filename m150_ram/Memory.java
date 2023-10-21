@@ -1,18 +1,21 @@
+package m150_ram;
+
 import java.util.ArrayList;
 
 /**
- * The Memory class represents a simple memory storage with the ability to store and retrieve values in cells.
+ * The m150_ram.Memory class represents a simple memory storage with the ability to store and retrieve values in cells.
  */
 public class Memory {
     double value;
     int size;
-    ArrayList<Double> memory;
+    ArrayList<Double> memory = new ArrayList<>();
 
     /**
      * Initializes the memory by adding a default value (0.0) to the first memory cell.
      */
-    public void initialize() {
-        memory.add(0, 0.0);
+    public void initialize(double value1, double value2) {
+        memory.add(value1);
+        memory.add(value2);
     }
 
     /**
@@ -49,6 +52,9 @@ public class Memory {
      * @param pos   The position (cell index) at which to store the value.
      */
     public void setValue(double value, int pos) {
-        this.value = value;
+        if (pos < memory.size())
+            memory.set(pos, value);
+        else
+            memory.add(value);
     }
 }

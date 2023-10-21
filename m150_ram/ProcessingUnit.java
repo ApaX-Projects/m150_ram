@@ -1,8 +1,10 @@
+package m150_ram;
+
 import java.util.ArrayList;
 import java.util.Random;
 
 /**
- * The ProcessingUnit class represents a processing unit that can initialize a program by generating a random array of integers.
+ * The m150_ram.ProcessingUnit class represents a processing unit that can initialize a program by generating a random array of integers.
  */
 public class ProcessingUnit {
 
