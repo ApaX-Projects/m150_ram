@@ -1,20 +1,22 @@
 package m150_ram;
 
 /**
- * The m150_ram.JMP class implements the m150_ram.Instruction interface and represents an unconditional jump
+ * The JMP class implements the Instruction interface and represents an unconditional jump
  * instruction in a computer program. It directly sets the program counter to a specified
  * position, unconditionally altering the program's flow.
+ * @author Seya
+ * @version 1.0
  */
 public class JMP implements Instruction {
 
     int pos;
     /**
-     * Executes the m150_ram.JMP (Jump) instruction, setting the program counter to a specified position,
+     * Executes the JMP (Jump) instruction, setting the program counter to a specified position,
      * unconditionally altering the program's flow.
      *
-     * @param mem     The m150_ram.Memory object that holds the memory cells.
-     * @param acc     The m150_ram.Accumulator object.
-     * @param counter The m150_ram.ProgramCounter for tracking the program's progress.
+     * @param mem     The Memory object that holds the memory cells.
+     * @param acc     The Accumulator object.
+     * @param counter The ProgramCounter for tracking the program's progress.
      */
     @Override
     public void execute(Memory mem, Accumulator acc, ProgramCounter counter) {

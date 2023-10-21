@@ -1,7 +1,9 @@
 package m150_ram;
 
 /**
- * The m150_ram.ProgramCounter class represents a counter that tracks the current progress of a running program.
+ * The ProgramCounter class represents a counter that tracks the current progress of a running program.
+ * @author Seya
+ * @version 1.0
  */
 public class ProgramCounter {
     int currentStep; // The current step or program counter value.

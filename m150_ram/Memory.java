@@ -3,7 +3,9 @@ package m150_ram;
 import java.util.ArrayList;
 
 /**
- * The m150_ram.Memory class represents a simple memory storage with the ability to store and retrieve values in cells.
+ * The Memory class represents a simple memory storage with the ability to store and retrieve values in cells.
+ * @author Seya
+ * @version 1.0
  */
 public class Memory {
     double value;

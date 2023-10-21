@@ -4,6 +4,8 @@ package m150_ram;
  * The m150_ram.ADD class implements the m150_ram.Instruction interface and represents an instruction
  * for performing addition in a computer program. It adds two values stored in
  * memory and the accumulator and updates the result in memory.
+ * @author Seya
+ * @version 1.0
  */
 public class ADD implements Instruction {
 

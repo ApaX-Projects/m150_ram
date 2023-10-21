@@ -1,7 +1,10 @@
 package m150_ram;
 
 /**
- * The m150_ram.Accumulator class represents a simple accumulator that can load and store values from/to a m150_ram.Memory object.
+ * The m150_ram.Accumulator class represents a simple accumulator
+ * that can load and store values from/to a m150_ram.Memory object.
+ * @author Seya
+ * @version 1.0
  */
 public class Accumulator {
 

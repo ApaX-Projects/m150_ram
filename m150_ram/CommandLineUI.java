@@ -4,15 +4,39 @@ import java.io.ObjectInputStream;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * The CommandLineUI class provides a command-line user interface for interacting with a simulated
+ * machine's memory and executing a list of instructions. It allows users to input instructions and
+ * data, execute the program, and view program execution status.
+ *
+ * The class supports a set of predefined instructions, including LDA, STA, ADD, SUB, JMP, JMZ, and HLT,
+ * which can be added to an instruction list and executed step by step.
+ *
+ * The user interacts with the program via the command-line interface, selecting options and providing
+ * inputs as necessary.
+ *
+ * @author Seya
+ * @version 1.0
+ */
 public class CommandLineUI {
     private Scanner scanner;
 
+    /**
+     * Constructs a CommandLineUI object and initializes a scanner for user input.
+     */
     public CommandLineUI() {
         this.scanner = new Scanner(System.in);
     }
 
-
-
+    /**
+     * Initializes the command-line user interface, allowing the user to input instructions and data,
+     * execute the program step by step, and view program execution status.
+     *
+     * @param mem The memory used by the simulated machine.
+     * @param acc The accumulator used by the simulated machine.
+     * @param counter The program counter used to track program execution.
+     * @throws InterruptedException If there is an issue with thread sleeping during program execution.
+     */
     public void initialize(Memory mem, Accumulator acc, ProgramCounter counter) throws InterruptedException {
 
         InstructionList list = new InstructionList();
@@ -137,6 +161,7 @@ public class CommandLineUI {
                 System.out.print("[" + mem.getValue(i) + "]");
             }
 
+            System.out.println();
             System.out.println("Program terminates in 10sec");
             Thread.sleep(10000);
             scanner.close();

@@ -4,6 +4,8 @@ package m150_ram;
  * The m150_ram.SUB class implements the m150_ram.Instruction interface and represents an instruction
  * for performing subtraction in a computer program. It subtracts one value stored
  * in the accumulator from a value in memory and updates the result in memory.
+ * @author Seya
+ * @version 1.0
  */
 public class SUB implements Instruction {
 
