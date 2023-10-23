@@ -7,6 +7,7 @@ package m150_ram;
  */
 public class ProgramCounter {
     int currentStep; // The current step or program counter value.
+    int stepBeforeJMP;
 
     /**
      * Initializes the program counter to a default value (1).
@@ -39,5 +40,9 @@ public class ProgramCounter {
      */
     public int getCurrentStep() {
         return currentStep;
+    }
+
+    public void setStepBeforeJMP(int stepBeforeJMP) {
+        this.stepBeforeJMP = getCurrentStep();
     }
 }

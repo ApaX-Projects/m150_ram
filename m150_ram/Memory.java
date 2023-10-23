@@ -44,6 +44,11 @@ public class Memory {
      * @return The value stored in the specified memory cell.
      */
     public double getValue(int pos) {
+        if (pos > memory.size())
+        {
+            memory.add(0.0);
+        }
+
         return memory.get(pos);
     }
 

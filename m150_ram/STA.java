@@ -21,5 +21,6 @@ public class STA implements Instruction {
     public void execute(Memory mem, Accumulator acc, ProgramCounter counter) {
         // Store the current value of the accumulator in the specified memory cell
         mem.setValue(acc.getCurrentValue(), pos);
+        counter.addCurrentStep();
     }
 }

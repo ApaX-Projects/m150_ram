@@ -138,14 +138,22 @@ public class CommandLineUI {
             for (int i = 0; i < mem.getSize(); i++) {
                 System.out.print("[" + mem.getValue(i) + "]");
             }
+            System.out.println("Accumulator: ");
+
+                System.out.print("[" + acc.getCurrentValue() + "]");
 
             System.out.println("\n---------------------------------");
             System.out.println("Instruction List: ");
             System.out.println("Current Instruction: " + list.getInstruction(counter.currentStep));
-            System.out.println("Upcoming Instruction: " + list.getInstruction(counter.currentStep + 1));
 
             Instruction currentInstruction = list.getInstruction(counter.currentStep);
             currentInstruction.execute(mem, acc, counter);
+            if (currentInstruction == jmp || currentInstruction == jmz)
+            {
+                list.remInstruction(counter);
+            }
+
+            System.out.println("Upcoming Instruction: " + list.getInstruction(counter.currentStep + 1));
 
             Thread.sleep(2000);
             if (counter.currentStep == list.instructionList.size() - 1)

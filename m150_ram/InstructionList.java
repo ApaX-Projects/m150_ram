@@ -44,6 +44,15 @@ public class InstructionList
      */
     public Instruction getInstruction(int index)
     {
+        if (index > instructionList.size())
+        {
+            instructionList.add(new HLT());
+        }
         return instructionList.get(index);
+    }
+
+    public void remInstruction(ProgramCounter counter)
+    {
+        instructionList.remove(counter.stepBeforeJMP);
     }
 }

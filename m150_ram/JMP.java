@@ -10,6 +10,7 @@ package m150_ram;
 public class JMP implements Instruction {
 
     int pos;
+
     /**
      * Executes the JMP (Jump) instruction, setting the program counter to a specified position,
      * unconditionally altering the program's flow.
@@ -21,6 +22,8 @@ public class JMP implements Instruction {
     @Override
     public void execute(Memory mem, Accumulator acc, ProgramCounter counter) {
         // Set the program counter to the specified position (unconditional jump)
+        counter.setStepBeforeJMP(counter.getCurrentStep());
         counter.setCurrentStep(pos);
     }
+
 }
