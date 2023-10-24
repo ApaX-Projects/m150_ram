@@ -45,4 +45,13 @@ public class ProgramCounter {
     public void setStepBeforeJMP(int stepBeforeJMP) {
         this.stepBeforeJMP = getCurrentStep();
     }
+
+    /**
+     * Get the step before the jump of the program.
+     *
+     * @return The current step or program counter value.
+     */
+    public int getStepBeforeJMP() {
+        return stepBeforeJMP;
+    }
 }

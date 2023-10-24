@@ -14,7 +14,7 @@ import java.util.ArrayList;
  */
 public class InstructionList
 {
-    ArrayList<Instruction> instructionList = new ArrayList<>();
+    public ArrayList<Instruction> instructionList = new ArrayList<>();
 
     /**
      * Adds the given instruction to the list of instructions.
