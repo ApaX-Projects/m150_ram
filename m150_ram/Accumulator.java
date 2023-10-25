@@ -39,6 +39,6 @@ public class Accumulator {
 
     public void clear()
     {
-        currentValue = Double.parseDouble(null);
+        currentValue = 0.0;
     }
 }
