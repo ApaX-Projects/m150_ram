@@ -10,7 +10,7 @@ package m150_ram;
  */
 public class JMZ implements Instruction {
 
-    int pos;
+    public int pos;
     /**
      * Executes the JMZ (Jump if Zero) instruction, checking if the current value of the
      * accumulator is zero. If it is, the program counter is set to a specified position.

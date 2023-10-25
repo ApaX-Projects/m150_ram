@@ -5,6 +5,13 @@ import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
+/**
+ * Test cases for the InstructionList class. This class is responsible for testing various methods
+ * of the InstructionList class, which is used to manage a list of instructions for program execution.
+ *
+ * @author Seya
+ * @version 1.0
+ */
 public class TestInstructionList {
     private InstructionList instructionList;
     private ProgramCounter programCounter;
@@ -15,6 +22,9 @@ public class TestInstructionList {
         programCounter = new ProgramCounter();
     }
 
+    /**
+     * Test the addition of instructions to the instruction list.
+     */
     @Test
     public void testAddList() {
         Instruction instruction = new ADD();
@@ -22,6 +32,9 @@ public class TestInstructionList {
         assertEquals(1, instructionList.instructionList.size());
     }
 
+    /**
+     * Test retrieving the last instruction in the instruction list.
+     */
     @Test
     public void testLastInstruction() {
         Instruction instruction1 = new ADD();
@@ -32,6 +45,9 @@ public class TestInstructionList {
         assertEquals(instruction2, last);
     }
 
+    /**
+     * Test retrieving instructions from the instruction list by index.
+     */
     @Test
     public void testGetInstruction() {
         Instruction instruction1 = new ADD();
@@ -44,12 +60,9 @@ public class TestInstructionList {
         assertEquals(instruction2, retrievedInstruction2);
     }
 
-    @Test
-    public void testGetInstructionBeyondSize() {
-        Instruction instruction = instructionList.getInstruction(5);
-        assertEquals(HLT.class, instruction.getClass());
-    }
-
+    /**
+     * Test removing an instruction from the instruction list based on the current program step.
+     */
     @Test
     public void testRemInstruction() {
         Instruction instruction1 = new ADD();

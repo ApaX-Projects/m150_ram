@@ -9,7 +9,7 @@ package m150_ram;
  */
 public class SUB implements Instruction {
 
-    int pos;
+    public int pos;
     /**
      * Executes the m150_ram.SUB instruction, subtracting a value from the accumulator from a value in memory
      * and storing the result back in memory.

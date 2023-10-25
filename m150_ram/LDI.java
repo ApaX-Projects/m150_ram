@@ -11,7 +11,7 @@ package m150_ram;
  */
 public class LDI implements Instruction
 {
-    int pos;
+    public int pos;
 
     /**
      * Executes the LDI instruction, loading an indirect value from memory into the accumulator.
@@ -25,5 +25,6 @@ public class LDI implements Instruction
         // Load an immediate value from memory into the accumulator
         int temp = (int) mem.getValue(pos);
         acc.load(mem, temp);
+        counter.addCurrentStep();
     }
 }

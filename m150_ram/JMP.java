@@ -9,7 +9,7 @@ package m150_ram;
  */
 public class JMP implements Instruction {
 
-    int pos;
+    public int pos;
 
     /**
      * Executes the JMP (Jump) instruction, setting the program counter to a specified position,

@@ -8,7 +8,7 @@ package m150_ram;
  */
 public class STA implements Instruction {
 
-    int pos;
+    public int pos;
     /**
      * Executes the STA (Store in Accumulator) instruction, storing the current value of
      * the accumulator into a specified memory cell and leaving the program counter unchanged.

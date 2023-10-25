@@ -9,7 +9,7 @@ package m150_ram;
  */
 public class LDA implements Instruction {
 
-    int pos;
+    public int pos;
 
     /**
      * Executes the LDA instruction, loading a value from memory into the accumulator

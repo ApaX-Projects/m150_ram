@@ -2,7 +2,7 @@ package m150_ram;
 
 public class STI implements Instruction
 {
-    int pos;
+    public int pos;
 
     /**
      * Executes the specific behavior associated with this instruction, using the provided
@@ -18,5 +18,6 @@ public class STI implements Instruction
             int temp = (int)mem.getValue(pos);
             acc.load(mem, temp);
             mem.setValue(acc.getCurrentValue(), temp);
+            counter.addCurrentStep();
     }
 }

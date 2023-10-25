@@ -9,7 +9,7 @@ package m150_ram;
  */
 public class ADD implements Instruction {
 
-    int pos;
+    public int pos;
     /**
      * Executes the m150_ram.ADD instruction, adding a value from memory to the accumulator
      * and storing the result back in memory.
